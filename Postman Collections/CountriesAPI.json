@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "c019fa01-64a8-4d63-9014-0b498df810a2",
+    "name": "CountriesAPICollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "export_import_collection_as_file",
+      "_postman_id": "953acc5a-83fa-4ca9-a67c-f28df7cf3685",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://restcountries.eu/rest/v2/name/india"
+      },
+      "response": []
+    },
+    {
+      "name": "import_export_collection_as_folder",
+      "_postman_id": "cb8db402-bbb3-4286-8b54-7f0f182ef1fb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://restcountries.com/v2/capital/delhi"
+      },
+      "response": []
+    },
+    {
+      "name": "share_collection_via_link",
+      "_postman_id": "f85580e9-c6da-4aa1-926f-5a355a7837bf",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://restcountries.com/v2/capital/delhi"
+      },
+      "response": []
+    },
+    {
+      "name": "import_as_curl_rawtext",
+      "_postman_id": "eac1d3f7-6db4-4408-8edd-ce4b55d84c99",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "DEMO-API-KEY"
+          }
+        ],
+        "url": {
+          "raw": "https://api.thecatapi.com/v1/images/search?format=json",
+          "protocol": "https",
+          "host": [
+            "api",
+            "thecatapi",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "images",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
