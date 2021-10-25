@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "6a39ac0d-c6ec-4ef0-a1a4-7f1f8dce1e9f",
+    "name": "FakeAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetAllUsers",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f81f1e93-a57c-452c-a919-f7e76fc72036",
+            "exec": [
+              "postman.setNextRequest(\"GetSingleUser\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "121fad6e-4e51-4726-b0d5-35471187b157",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{url}}/users"
+      },
+      "response": []
+    },
+    {
+      "name": "GetSingleUser",
+      "_postman_id": "09bad2b8-1efc-4182-b21c-8329c119ebe6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/users/1"
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateUser",
+      "_postman_id": "f90b49c3-45f8-45cd-bb11-498478c3fc04",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"name\":\"Akshaya\",\r\n\t\"location\":\"norway\",\r\n\t\"Phone\":\"6762902\",\r\n\t\"courses\":[\r\n\t\t\"Python\",\r\n\t\t\"Postman\"\r\n\t]\r\n\t}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{url}}/users/4"
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteUser",
+      "_postman_id": "a2839866-22db-4fd3-91cd-574967e20250",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{url}}/users/7"
+      },
+      "response": []
+    },
+    {
+      "name": "PostUser",
+      "_postman_id": "4741fcd2-91e4-40a4-b63f-494ecde49eba",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"name\":\"jyoti\",\r\n\t\"location\":\"italy\",\r\n\t\"Phone\":\"45212902\",\r\n\t\"courses\":[\r\n\t\t\"C#\",\r\n\t\t\"Javascript\"\r\n\t]\r\n\t}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{url}}/users"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "6960aa14-c7b8-4c58-b1a5-df60351ad00a",
+        "type": "text/javascript",
+        "exec": [
+          "postman.setGlobalVariable(\"url\",\" http://localhost:3000\")"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "8bdb90b7-e585-4ca2-aff8-47e9cfaa55e5",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "7ffa9624-fa15-4c11-88a4-3d12908b352c",
+      "key": "url",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}
